@@ -193,27 +193,27 @@
             video.srcObject = stream;
             video.play();
         }
-        if(videoArr.length ==0) {
-            navigator.mediaDevices.enumerateDevices()
-                .then(function(devices) {
-                    videoArr = []
-                    devices.forEach(function(device) {
-                        console.log(device)
-                        if(device.kind == 'videoinput'){
-                            videoArr.push({
-                                'label': device.label,
-                                'id': device.deviceId
-                            })
-                        }
-                    });
-                    alert(JSON.stringify(videoArr))
-                    takePhoto({deviceId: {exact: videoArr[2].id}})
-                })
-                .catch(function(err) {
-                });
-        } else {
-            // takePhoto({deviceId: {exact: videoArr[0].id}})
-        }
+        // if(videoArr.length ==0) {
+        //     navigator.mediaDevices.enumerateDevices()
+        //         .then(function(devices) {
+        //             videoArr = []
+        //             devices.forEach(function(device) {
+        //                 console.log(device)
+        //                 if(device.kind == 'videoinput'){
+        //                     videoArr.push({
+        //                         'label': device.label,
+        //                         'id': device.deviceId
+        //                     })
+        //                 }
+        //             });
+        //             alert(JSON.stringify(videoArr))
+        //             takePhoto({deviceId: {exact: videoArr[2].id}})
+        //         })
+        //         .catch(function(err) {
+        //         });
+        // } else {
+        //     // takePhoto({deviceId: {exact: videoArr[0].id}})
+        // }
 
     }
 
