@@ -17,6 +17,9 @@
 
 </body>
 <script>
-    localStorage.clear()
+    if(localStorage.getItem('globalConfig')) {
+        localStorage.clear()
+    }
 </script>
 </html>
+
