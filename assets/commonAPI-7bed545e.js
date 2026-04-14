@@ -1,0 +1,1 @@
+import{a as n}from"./http-2297d379.js";const s=t=>n.post("complaintSetting/list",t);function e(t){return n.upload("files/upload",t)}function a(t){return n.post("InvokeExternal/queryTicketInfo",t)}export{e as f,a as g,s};
